@@ -17,3 +17,26 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ![alt-text](https://github.com/BassamMetwally/Flicker/blob/master/RecodringFinal2.gif)
 
+## Flix Part 2
+
+
+#### REQUIRED (10pts)
+
+- [x] (8pts) Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
+- [x] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
+
+#### BONUS
+I changed the Apps UI to try something different rather than the previous one.
+
+### App Walkthough GIF
+![alt-text](https://github.com/BassamMetwally/Flicker/blob/master/RecodringFinal2.gif)
+
+### Notes
+The Youtube video did not work but the superman trailer workded perfectly. Did not know how to fix it but i suspect its something from the webstie
+
+## Open-source libraries used
+- [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
+
+
+
