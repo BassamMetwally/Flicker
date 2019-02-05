@@ -29,7 +29,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 I changed the Apps UI to try something different rather than the previous one.
 
 ### App Walkthough GIF
-![alt-text](https://github.com/BassamMetwally/Flicker/blob/master/RecodringFinal2.gif)
+![alt-text](https://github.com/BassamMetwally/Flicker/blob/master/FlickerFinal.gif)
 
 ### Notes
 The Youtube video did not work but the superman trailer workded perfectly. Did not know how to fix it but i suspect its something from the webstie
