@@ -6,13 +6,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ImageView;
-
+import android.widget.Toast;
+import android.content.Intent;
 import com.bumptech.glide.Glide;
 import com.example.bassammetwally.flicker.R;
+import com.example.bassammetwally.flicker.models.DetailActivity;
 import com.example.bassammetwally.flicker.models.Movie;
 import java.util.List;
+
+import org.parceler.Parcels;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder> {
 
@@ -49,6 +54,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         TextView tvTitle;
         TextView tvOverview;
         ImageView ivPoster;
+        RelativeLayout container;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -56,12 +62,25 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             tvTitle = itemView.findViewById(R.id.title);
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
+            container = itemView.findViewById(R.id.container);
+
         }
 
-        public void bind(Movie movie) {
+        public void bind(final Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
             Glide.with(context).load(movie.getPosterPath()).into(ivPoster);
+            container.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View view){
+                    Toast.makeText(context, movie.getTitle(), Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(context, DetailActivity.class);
+                    i.putExtra("title", movie.getTitle());
+                    i.putExtra("movie", Parcels.wrap(movie));
+                    context.startActivity(i);
+                }
+            });
 
         }
     }
